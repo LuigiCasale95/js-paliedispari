@@ -12,7 +12,7 @@ console.log(`Il numero scelto dall'utente è **${numeroUtente}**`);
 
 /* Scelta utente tra pari e dispari */
 let sceltaUtentePariDispari = prompt("Sceri se pari o dispari")
-console.log(`L'utente ha scelto ${sceltaUtentePariDispari}`);
+console.log(`L'utente ha scelto **${sceltaUtentePariDispari}**`);
 
 //Numero random estratto dal PC
  let NumeroPc = randomPcNum()
@@ -22,21 +22,15 @@ console.log(`L'utente ha scelto ${sceltaUtentePariDispari}`);
  let somma = (numeroUtente + NumeroPc)
  console.log(`Il totale è ${somma}`);
 
- /* Verifica del numero, se pari o dispari */
+ /* Verifica del numero, se pari o dispari e spacifica il vincitore*/
 console.log("Ha vinto il " + pariOppureDispari(somma))
-
- //Elezione del vincitore
-
-
-
-
-
-
 
 
 
 
  //Funzioni
+
+ /* Numero random tra 1 e 5 */
 function randomPcNum() {
     let number = Math.floor(Math.random() * 5 ) + 1;
     console.log(number);
@@ -44,6 +38,7 @@ function randomPcNum() {
     return number
 }
 
+/* Funzione per verificare se pari o dispari */
 function pariOppureDispari(somma) {
     if (somma % 2 === 0) {
         return "PARI"
