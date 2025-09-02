@@ -15,12 +15,7 @@ let parolaInversa = (reverseWord(parolaUtenteMaiuscolo))
 
 /* Usare la funzione per controllare se palindroma */
 
-    if (parolaUtenteMaiuscolo === parolaInversa) {
-    console.log("LA PAROLA è PALINDROMA");
-    } else {
-        console.log("LA PAROLA NON è PALINDROMA");
-        
-    }
+verificaSePalindroma(parolaInversa, parolaUtenteMaiuscolo)
 
 
 
@@ -74,3 +69,11 @@ function reverseWord(word) {
 }
 
 /* Funzione per verificare se la parola è palindroma */
+function verificaSePalindroma(parolaUtenteMaiuscolo, parolaInversa) {
+        if (parolaUtenteMaiuscolo === parolaInversa) {
+    console.log("LA PAROLA è PALINDROMA");
+    } else {
+        console.log("LA PAROLA NON è PALINDROMA");
+        
+    }
+}
