@@ -11,34 +11,20 @@ console.log(`La parola dell'utente è ${parolaUtenteMaiuscolo}`);
 /* Usare funzione per invertire la parola */
 
 console.log(reverseWord(parolaUtenteMaiuscolo));
-let parolaInversa = (reverseWord(parolaUtenteMaiuscolo))
+// let parolaInversa = (reverseWord(parolaUtenteMaiuscolo))
 
 /* Usare la funzione per controllare se palindroma */
 
-verificaSePalindroma(parolaInversa, parolaUtenteMaiuscolo)
+// verificaSePalindroma(parolaInversa, parolaUtenteMaiuscolo)
 
+let isPalindroma = verificaSePalindroma(parolaUtenteMaiuscolo);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if(isPalindroma == true) {
+    console.log('La parola è palindroma')
+} else {
+    console.log("la parola non è palindroma");
+    
+}
 
 
 
@@ -57,23 +43,30 @@ function reverseWord(word) {
     // ciclo la stringa
     for (let i = word.length - 1; i >= 0; i--) {
         let letteraIesima = word[i];
-        // console.log(letteraIesima);
-        // revertedWord = revertedWord + letteraIesima;
+
         revertedWord += letteraIesima;
     }
-
-    // alternativa al FOR
-    // let revertedWord = word.split("").reverse().join("");
 
     return revertedWord
 }
 
 /* Funzione per verificare se la parola è palindroma */
-function verificaSePalindroma(parolaUtenteMaiuscolo, parolaInversa) {
+/* function verificaSePalindroma(parolaUtenteMaiuscolo, parolaInversa) {
         if (parolaUtenteMaiuscolo === parolaInversa) {
     console.log("LA PAROLA è PALINDROMA");
     } else {
         console.log("LA PAROLA NON è PALINDROMA");
         
+    }
+} */
+
+function verificaSePalindroma(parolaUtenteMaiuscolo) {
+
+    let parolaInversa = reverseWord(parolaUtenteMaiuscolo);
+
+    if (parolaUtenteMaiuscolo === parolaInversa) {
+        return true;
+    } else {
+        return false;
     }
 }
